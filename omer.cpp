@@ -8,22 +8,31 @@
     ID:20250314
     Filter 1 (Grayscale)
     Filter 5 (Flip Image)
+    Filter 9 (Merge image)
+    Filter 13 (Natural sunlight/wano)    
  -------------------------------------    
   2.Omar sayed mohamed sayed
     ID:20251265
     Filter 2 (Black & White)
     Filter 6 (Rotate Image)
+    Filter 10 (Detect_Image_Edges)
+    Filter 14  (old_tv_filter)      
  -------------------------------------    
   3.Kareem Ali Ahmed Tammam 
     ID:20251292
     Filter 3 (Invert Image)
     Filter 7 (Darken / Lighten)
+    Filter 11 (crop image)   
+    Filter 15(Purple wano)     
  -------------------------------------    
   4.Youssef salama saad
     ID:20251495
     Filter 4 (Add Frame)
     Filter 8 (Resize Image)
+    Filter 12(Blur image)  
+    Filter 16(Infared photography)  
 */
+
 using namespace std;
 void Infraed_photographary(Image& image){
     for (int x = 0; x < image.width; ++x) {
