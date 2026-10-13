@@ -37,6 +37,12 @@
     https://github.com/kareemtammam22-cell/oop_first_assignment
   2. Document Link :-
     https://docs.google.com/document/d/1yu7QnNshQ2BBxHu9fQFTO11VFZPli34F/edit?usp=drivesdk&ouid=117183389754258683203&rtpof=true&sd=true
+  ------------------------------------
+  أقسم بالله العظيم أن هذا الكود من عمل الفريق 100% بلا نسخ أي مصدر أو تخليق بذكاء اصطناعي
+  1- 	Seif Hassan Ramadan Mohamed
+  2-  Omar Sayed Mohamed Sayed
+  3-  Kareem Ali Ahmed Tammam
+  4-  Yousef Salama Saad Mabrouk
 */
 
 using namespace std;
