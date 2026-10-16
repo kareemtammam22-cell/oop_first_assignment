@@ -21,18 +21,18 @@ void frameFilter(Image& image)
     cout << "Enter frame color (R G B): ";
     cin >> red >> green >> blue;
 
-    for (int _y = 0; _y < image.height; _y++)
+    for (int y = 0; y < image.height; y++)
     {
-        for (int _x = 0; _x < image.width; _x++)
+        for (int x = 0; x < image.width; x++)
         {
-            if (_x < border ||
-                _x >= image.width - border ||
-                _y < border ||
-                _y >= image.height - border)
+            if (x < border ||
+                x >= image.width - border ||
+                y < border ||
+                y >= image.height - border)
             {
-                image.setPixel(_x, _y, 0, red);
-                image.setPixel(_x, _y, 1, green);
-                image.setPixel(_x, _y, 2, blue);
+                image.setPixel(x, y, 0, red);
+                image.setPixel(x, y, 1, green);
+                image.setPixel(x, y, 2, blue);
             }
         }
     }
@@ -41,18 +41,18 @@ void frameFilter(Image& image)
     {
         int innerBorder = border / 3;
 
-        for (int _y = innerBorder; _y < image.height - innerBorder; _y++)
+        for (int y = innerBorder; y < image.height - innerBorder; y++)
         {
-            for (int _x = innerBorder; _x < image.width - innerBorder; _x++)
+            for (int x = innerBorder; x < image.width - innerBorder; x++)
             {
-                if (_x < innerBorder + 5 ||
-                    _x >= image.width - innerBorder - 5 ||
-                    _y < innerBorder + 5 ||
-                    _y >= image.height - innerBorder - 5)
+                if (x < innerBorder + 5 ||
+                    x >= image.width - innerBorder - 5 ||
+                    y < innerBorder + 5 ||
+                    y >= image.height - innerBorder - 5)
                 {
-                    image.setPixel(_x, _y, 0, 255);
-                    image.setPixel(_x, _y, 1, 255);
-                    image.setPixel(_x, _y, 2, 255);
+                    image.setPixel(x, y, 0, 255);
+                    image.setPixel(x, y, 1, 255);
+                    image.setPixel(x, y, 2, 255);
                 }
             }
         }
