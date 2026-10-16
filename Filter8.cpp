@@ -3,37 +3,35 @@
 
 using namespace std;
 
-//***/ /***//*** //***//* **//* **
-
 void resizeImage(Image& image)
 {
-    int _newWidth, _newHeight;
+    int newWidth, newHeight;
 
     cout << "Enter new width: ";
-    cin >> _newWidth;
+    cin >> newWidth;
 
     cout << "Enter new height: ";
-    cin >> _newHeight;
+    cin >> newHeight;
 
-    if (_newWidth <= 0 || _newHeight <= 0)
+    if (newWidth <= 0 || newHeight <= 0)
     {
         cout << "Invalid dimensions!\n";
         return;
     }
 
-    Image resized(_newWidth, _newHeight);
+    Image resized(newWidth, newHeight);
 
-    for (int _y = 0; _y < _newHeight; _y++)
+    for (int y = 0; y < newHeight; y++)
     {
-        for (int _x = 0; _x < _newWidth; _x++)
+        for (int x = 0; x < newWidth; x++)
         {
-            int _oldX = _x * image.width / _newWidth;
-            int _oldY = _y * image.height / _newHeight;
+            int oldX = x * image.width / newWidth;
+            int oldY = y * image.height / newHeight;
 
-            for (int _channel = 0; _channel < 3; _channel++)
+            for (int channel = 0; channel < 3; channel++)
             {
-                resized(_x, _y, _channel) =
-                    image(_oldX, _oldY, _channel);
+                resized(x, y, channel) =
+                    image(oldX, oldY, channel);
             }
         }
     }
@@ -41,23 +39,21 @@ void resizeImage(Image& image)
     image = resized;
 }
 
-//***/ /***//*** //***//* **//* **
-
 int main()
 {
-    string _filename;
+    string filename;
 
     cout << "Enter image name: ";
-    cin >> _filename;
+    cin >> filename;
 
-    Image image(_filename);
+    Image image(filename);
 
     resizeImage(image);
 
     cout << "Enter output image name: ";
-    cin >> _filename;
+    cin >> filename;
 
-    image.saveImage(_filename);
+    image.saveImage(filename);
 
     cout << "Image resized successfully!\n";
 
