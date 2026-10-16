@@ -14,23 +14,23 @@ int main() {
     cout << "Enter blur level (1 to 10): ";
     cin >> level;
 
-    for (int x = 0; x < image.width; x++) {
-        for (int y = 0; y < image.height; y++) {
-            for (int c = 0; c < 3; c++) {
+    for (int _x = 0; _x < image.width; _x++) {
+        for (int _y = 0; _y < image.height; _y++) {
+            for (int _c = 0; _c < 3; _c++) {
                 int sum = 0, count = 0;
 
                 for (int i = -level; i <= level; i++) {
                     for (int j = -level; j <= level; j++) {
-                        int nx = x + i;
-                        int ny = y + j;
+                        int nx = _x + i;
+                        int ny = _y + j;
                         if (nx >= 0 && nx < image.width && ny >= 0 && ny < image.height) {
-                            sum += original(nx, ny, c);
+                            sum += original(nx, ny, _c);
                             count++;
                         }
                     }
                 }
 
-                image(x, y, c) = sum / count;
+                image(_x, _y, _c) = sum / count;
             }
         }
     }
